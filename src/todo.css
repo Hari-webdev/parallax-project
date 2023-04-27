@@ -1,0 +1,105 @@
+body{
+    background-color:  rgb(255, 247, 199);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    box-sizing: border-box;
+    background-image: url('https://c0.wallpaperflare.com/preview/552/430/468/table-notepad-book-stack-glasses.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 40rem;
+    width: 37rem;
+    position: relative;
+    top: 80px;
+    left: 16.7rem;
+    
+}
+   
+
+.header{
+    position: absolute;
+    top: 0;
+    
+
+}
+
+.form{
+    position: absolute;
+    top: 3rem;
+   
+    
+}
+
+.input {
+    height: 25px;
+    width: 300px;
+    border: none;
+    border-radius: 10px;
+    padding-left: 15px;
+}
+
+img{
+    width: 700px;
+    background-position: center;
+}
+
+.add-btn{
+    height: 29px;
+    border: none;
+    border-radius: 10px;
+    margin-left: 15px;
+    padding: 5px 10px;
+    text-transform: uppercase;
+    font-weight: 700;
+   
+
+}
+
+.add-btn:active{
+    background-color: rgb(7, 129, 7);
+}
+
+
+    
+
+
+
+ .input-list{
+    height: 15px;
+    width: 300px;
+     margin-right: 250px;
+    text-transform: uppercase;
+    margin-top: 25px;
+    
+    
+}
+
+
+
+.input-list_btn{
+    height: 29px;
+    border: none;
+    border-radius: 10px;
+    margin-left: 15px;
+    padding: 5px 10px;
+    text-transform: uppercase;
+    font-weight: 700;
+    background-color: rgb(243, 121, 121);
+}
+
+
+
+.input-list_btn:hover{
+    background-color: rgb(228, 67, 67);
+}

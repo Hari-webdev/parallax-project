@@ -1,25 +1,48 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react'
+import Inputarea from './inputarea'
+import Todoitems from './To-do_items'
+import "./todo.css"
 
-function App() {
+const App = () => {
+ 
+  const [items,setItems]= useState([]);
+
+  function addItem(inputText){
+    setItems((previtems)=>{
+      return [...previtems,inputText];
+    }); 
+   
+  }
+
+  function deleteitems(id){
+    setItems((previtems)=>{ 
+      return previtems.filter((value,index)=>{
+        return index !== id;
+      })
+      
+
+    })
+  }
+ console.log(items);
+   
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='container'>
+      <div className='header'>
+        <h1>To-Do List</h1>
+      </div>
+      <Inputarea value={addItem} />
+      <div>
+        <ul>
+          {
+            items.map((value,index)=>{
+              return <Todoitems key={index} list={value}  id={index} deleteitems={deleteitems} />
+            })
+          }
+        </ul>
+      </div>
     </div>
   );
-}
+};
 
-export default App;
+export default App
